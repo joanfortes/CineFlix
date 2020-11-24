@@ -1,13 +1,10 @@
-import 'file:///C:/Users/Joan/AndroidStudioProjects/cine_flix/lib/datas/director_data.dart';
+import 'package:cine_flix/datas/director_data.dart';
 import 'package:flutter/material.dart';
 import 'package:recase/recase.dart';
 
 class DirectorScreen extends StatefulWidget {
-
-  Director directors;
-
+  final Director directors;
   DirectorScreen(this.directors);
-
   @override
   _DirectorScreenState createState() => _DirectorScreenState(directors);
 }

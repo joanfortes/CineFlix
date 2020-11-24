@@ -1,6 +1,6 @@
-import 'file:///C:/Users/Joan/AndroidStudioProjects/cine_flix/lib/datas/movie_data.dart';
-import 'file:///C:/Users/Joan/AndroidStudioProjects/cine_flix/lib/filter_service/movie_filter.dart';
-import 'file:///C:/Users/Joan/AndroidStudioProjects/cine_flix/lib/screens/movie_screen.dart';
+import 'package:cine_flix/datas/movie_data.dart';
+import 'package:cine_flix/filter_service/movie_filter.dart';
+import 'package:cine_flix/screens/movie_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:recase/recase.dart';
 

@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'file:///C:/Users/Joan/AndroidStudioProjects/cine_flix/lib/datas/director_data.dart';
-import 'file:///C:/Users/Joan/AndroidStudioProjects/cine_flix/lib/screens/director_screen.dart';
+import 'package:cine_flix/datas/director_data.dart';
+import 'package:cine_flix/screens/director_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:recase/recase.dart';
@@ -10,9 +10,7 @@ class DirectorTab extends StatefulWidget {
   _DirectorTabState createState() => _DirectorTabState();
 }
 
-
 class _DirectorTabState extends State<DirectorTab> {
-
   List<Director> _directors = List<Director>();
 
   Future<List<Director>> fetchDirectors() async {

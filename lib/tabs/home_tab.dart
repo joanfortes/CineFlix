@@ -1,23 +1,24 @@
-import 'file:///C:/Users/Joan/AndroidStudioProjects/cine_flix/lib/tabs/director_tab.dart';
-import 'file:///C:/Users/Joan/AndroidStudioProjects/cine_flix/lib/tabs/movie_tab.dart';
-import 'file:///C:/Users/Joan/AndroidStudioProjects/cine_flix/lib/widgets/custom_drawer.dart';
-import 'file:///C:/Users/Joan/AndroidStudioProjects/cine_flix/lib/widgets/dropdown_appbar.dart';
+import 'package:cine_flix/tabs/director_tab.dart';
+import 'package:cine_flix/tabs/movie_tab.dart';
+import 'package:cine_flix/widgets/custom_drawer.dart';
+import 'package:cine_flix/widgets/dropdown_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
+
 const request = "https://cine-flix.herokuapp.com/";
 
 class HomeTab extends StatefulWidget {
   @override
   _HomeTabState createState() => _HomeTabState();
 }
+
 Future<dynamic> getData() async {
   http.Response response = await http.get(request);
   return response.body;
 }
 
 class _HomeTabState extends State<HomeTab> {
-
   @override
   Widget build(BuildContext context) {
     final _pageController = PageController();
@@ -73,9 +74,7 @@ class _HomeTabState extends State<HomeTab> {
             title: Text("Movies"),
             backgroundColor: Colors.red,
             centerTitle: true,
-            actions: <Widget>[
-              CustomDropdown()
-            ],
+            actions: <Widget>[CustomDropdown()],
           ),
           drawer: CustomDrawer(_pageController),
           body: MovieTab(),
@@ -92,5 +91,4 @@ class _HomeTabState extends State<HomeTab> {
       ],
     );
   }
-
 }

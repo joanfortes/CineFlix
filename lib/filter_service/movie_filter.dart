@@ -1,7 +1,6 @@
 import 'dart:convert';
-import 'file:///C:/Users/Joan/AndroidStudioProjects/cine_flix/lib/datas/movie_data.dart';
+import 'package:cine_flix/datas/movie_data.dart';
 import 'package:http/http.dart' as http;
-
 
 class Services {
   static const String url = 'https://cine-flix.herokuapp.com/movies';

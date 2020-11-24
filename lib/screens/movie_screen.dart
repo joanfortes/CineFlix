@@ -1,10 +1,9 @@
-import 'file:///C:/Users/Joan/AndroidStudioProjects/cine_flix/lib/datas/movie_data.dart';
+import 'package:cine_flix/datas/movie_data.dart';
 import 'package:flutter/material.dart';
 import 'package:recase/recase.dart';
 
 class MovieScreen extends StatefulWidget {
-  Movies movies;
-
+  final Movies movies;
   MovieScreen(this.movies);
 
   @override
@@ -28,13 +27,12 @@ class _MovieScreenState extends State<MovieScreen> {
       body: ListView(
         children: <Widget>[
           AspectRatio(
-            aspectRatio: 0.7,
-            child: Image.network(
-              movies.image,
-              fit: BoxFit.fill,
-              height: 200.0,
-            )
-          ),
+              aspectRatio: 0.7,
+              child: Image.network(
+                movies.image,
+                fit: BoxFit.fill,
+                height: 200.0,
+              )),
           Padding(
             padding: EdgeInsets.all(20.0),
             child: Column(
